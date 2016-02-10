@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<form action="localhost/Create_account.php" method="post">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.4.css" > 
+	<link rel="stylesheet" href="css/login_page.css" > 
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+			$.mobile.pushStateEnabled = false;
+		});
+	</script>
+	<script src="jquery/jquery.mobile-1.4.4.js"></script>
+	<div  data-role="page" data-theme="b" >
+    <div data-role="header">
+			<a onclick="Back()" data-icon="back">Back</a>
+			<h1>Login</h1>
+	</head>
+	<body>
+	<div class="center">
+		<p>Welcome to TAM!!!</p>
+		<table>
+			<tr><td>Username:</td><td><input type="text" name="Username" id="Username"></td><td><p class="error" id="eruser"></p>
+			<tr><td>Password:</td><td><input type="password" name="Password" id="Password"></td><td><p class="error" id="erpass"></p>
+		</table>
+		<button type="button" onclick="Login()">Login</button>
+		<button type="button" onclick="Create_account()">Create Account</button>
+		<p class="error" id="result"></p>
+	</div>
+	</div>
+		<script src="js/navbar.js"></script>
+		<script src="js/sign_in.js"></script>
+    </body>
+	
+</html>

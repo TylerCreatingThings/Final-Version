@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<form action="localhost/Create_account.php" method="post">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.4.css" > 
+	<link rel="stylesheet" href="css/login_page.css" > 
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+			$.mobile.pushStateEnabled = false;
+		});
+	</script>
+	<script src="jquery/jquery.mobile-1.4.4.js"></script>
+	<div  data-role="page" data-theme="b" >
+    <div data-role="header">
+		<a onclick="Back()" data-icon="back">Back</a>
+		<h1>Add Event</h1>
+		<a onclick="home_page()" data-icon="home">Home</a>
+	</head>
+	<body onload="display_hd()">
+		<div id="online" class="center">
+		<ul data-role="listview">
+			<li><a  onclick="Event_page('work')">Work</a></li>
+			<li><a onclick="Event_page('test')">Test/Assignment</a></li>
+			<li><a onclick="Event_page('app')">Appointment</a></li>
+			<li><a onclick="Event_page('per')">Personal</a></li>
+			<li><a onclick="Event_page('vaca')">Vacation</a></li>
+		</ul>
+		</div>
+		<div id="offline">
+			<p>Please sign in.</p>
+		</div>
+	</div>
+	<script src="js/navbar.js"></script>
+	<script src="js/login_control.js"></script>
+	<script src="js/Add_Event.js"></script>
+	</body>
+</html>

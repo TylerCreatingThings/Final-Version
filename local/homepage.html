@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<form action="localhost/Create_account.php" method="post">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.4.css" > 
+	<link rel="stylesheet" href="css/login_page.css" > 
+	<script src="jquery/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+			$.mobile.pushStateEnabled = false;
+		});
+	</script>
+	<script src="jquery/jquery.mobile-1.4.4.js"></script>
+	<div data-role="page" data-theme="b" >
+    <div data-role="header">
+			<h1 id="home_head"></h1>
+	</head>
+	<body onload="display_hd()">
+		<div id="online" class="center">
+			<img align="center"  src="img/TAM.png"></img>
+			<label>Please Select A Choice:</label>
+			<button onclick="Add_page()" type="button">Add Event</button><br>
+			<button onclick="Edit_page()" type="button">Edit Event</button><br>
+			<button type="button">Calender</button>
+		</div>
+		<div id="offline">
+			<p>Please sign in.</p>
+		</div>
+		</div>
+	<script src="js/navbar.js"></script>
+	<script src="js/login_control.js"></script>
+	</body>
+	
+</html>
